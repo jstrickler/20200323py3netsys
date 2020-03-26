@@ -10,6 +10,7 @@ with requests.Session() as session:  # <4>
     session.params.update({'key': KEY})  # <5>
     response = session.get(BREWERIES)  # <6>
     resource_data = response.json()  # <7>
+    pprint(resource_data)
     for brewery in resource_data['data']:  # <8>
         b_name = brewery['name']
         b_id = brewery['id']
