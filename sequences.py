@@ -7,3 +7,6 @@ fruits = [
     'BaNaNa', 'Persimmon   '
 ]
 
+for ctemp in ctemps:
+    ftemp = ((9 * ctemp) / 5) + 32
+    print("{} is {}".format(ctemp, ftemp))

@@ -16,13 +16,19 @@ for m in sorted(colors):   # <1>
 print()
 
 phrase = ('dog', 'bites', 'man')
-print(" ".join(reversed(phrase)))  # <2>
+rev = reversed(phrase)  # GENERATOR !!
+print("rev:", rev)
+print(" ".join(rev))  # <2>
 print()
 
 first_names = "Bill Bill Dennis Steve Larry".split()
 last_names = "Gates Joy Richie Jobs Ellison".split()
 
-full_names = zip(first_names, last_names)  # <3>
+full_names = zip(first_names, last_names)  # <3>   GENERATOR!!
+
+first_names.append('Larry')
+last_names.append('Wall')
+
 print("full_names:", full_names)
 print()
 
